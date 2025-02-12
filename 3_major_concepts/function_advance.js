@@ -32,7 +32,7 @@ console.log(
 // 1) Input 외의 외부 상태에 의존하지 않는 로직 설계
 // 2) 해당 로직을 수행하는 데 필요한 연산과정에 단계별 이름을 짓고 구획을 나눔
 // 3) 각 이름에 해당하는 함수를 선언 (중첩형, 다음 단계 처리할 함수를 리턴)
-// 4) Currying 방식으로 호출
+// 4) Currying 방식으로 중첩 구조 설정 후 연쇄호출 "()()" 수행
 
 let hahaha = a => console.log('hahahaha')
 callMultiple(hahaha, 3)

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>속성노드의 기본 구조 확인하기</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="app.css"> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+<input type="email" id="username" placeholder="insert login email" value="">
+
+<script>
+    const $loginInput = document.querySelector('input')
+    console.log($loginInput)
+    console.log($loginInput.attributes)
+
+    // attributes 노드를 직접 편집해 보기
+    // $loginInput.attributes.type.value = 'password'
+    $loginInput.attributes.id.value = 'account'
+    console.log($loginInput.id)
+    $loginInput.attributes.value.value = 'js-filled@email.addr'
+
+    // JS 에서의 DOM 객체가 가지고 있는 "유사 배열" 적 특성을 사용하면
+    // 스타일 적용, 데이터 순회, 등등 반복문, 제어문을 수행하기 쉬워짐!
+    for (let item of $loginInput.attributes) {
+        console.log(item) // 배열 순회 -> 편리!
+    }
+    for (let item in $loginInput.attributes) {
+        console.log(item) // 객체 순회 -> 불편
+    }
+
+    // JS 변수 선언을 한번에 여러 개 가능
+    let id, class_, type, placeholder, value;
+    type = 'email'
+    id = 'account'
+    class_ = 'login-form'
+    placeholder = 'insert login email'
+    value = 'js-filled-by-obj@email.addr'
+
+    console.log($loginInput.attributes)
+    const attributesObj = {
+        type : type,
+        id : id,
+        class : class_,
+        placeholder : placeholder,
+        value : value,
+    }
+
+    // $element.attributes 필드는 ReadOnly 속성이라서 한번에 교체 불가
+    Object.entries(attributesObj).forEach(
+        ([k, v]) => $loginInput.setAttribute(k, v)
+    )
+    console.log($loginInput)
+</script>
+</body>
+</html>

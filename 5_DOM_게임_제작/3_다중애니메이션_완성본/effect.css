@@ -1,11 +1,24 @@
+/* CSS 초기화 - 커스텀 초기화 예제 활용 등 꼭 적용! */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 /*  캐릭터 애니메이팅  */
 #zelda-link {
+    /* 캐릭터 크기 및 기본 제어 설정 */
     width: 120px;
     height: 130px;
     overflow: hidden;
     animation-fill-mode: forwards;
-}
 
+    /* 가운데 정렬을 위해서 약식 세팅 */
+    /* justify, align 활용해서 가운데 정렬 더 정확하게 적용 권장 */
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+}
 .zelda-link-init {
     background: url('../img/zelda-link/front_stand.png') no-repeat center/cover;
 }
@@ -189,3 +202,40 @@
     animation: right-step 500ms infinite;
     animation-play-state: running;
 }
+/* ========== 캐릭터 제어 끝 ========== */
+
+/* ========== 배경 제어 시작 ========== */
+.container-xxl {
+    /* 제목요소 등 화면 정보 처리 완비 후 아래 활성화 */
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /* 스크롤 발생 없이 부모요소를 꽉 채우는 설정 */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*  타운맵 div 요소를 가운데 정렬  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.town-map {
+    /* 시각적 공간 점유 */
+    min-width: 2000px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: auto;
+
+    /* 이미지 크기 및 정렬 제어 */
+    background: url("../img/pokemon_town_map.png") repeat center/cover;
+    /* 동적 제어 적용 시 싱크 불필요 */
+    /*background-image: url("../img/pokemon_town_map.png");*/
+    /*background-size: cover;*/
+    /*background-repeat: repeat;*/
+
+    /*  레이아웃 상호작용 없이 배경 제어 : background-position  */
+    /* background-position: 1000px 1000px; */
+    /*  적용효과 확인 후 주석처리  */
+}
+/* ========== 배경 제어 끝 ========== */

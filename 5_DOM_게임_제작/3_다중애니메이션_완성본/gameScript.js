@@ -20,14 +20,21 @@ images.forEach(image => {
 const $userCharacter = document.getElementById('zelda-link');
 document.addEventListener('DOMContentLoaded', function (){
         // 동작별 디폴트 이미지를 다르게 하기 위해 CSS 에서 정적인 이미지 지정을 아예 제거하고 아래와 같이 동적 처리!
-        $userCharacter.setAttribute('style',`background: url('${imgDir}front_stand.png') no-repeat center/cover;`)
-        // $userCharacter.classList.add('zelda-link-init')
+        // $userCharacter.setAttribute('style',`background: url('${imgDir}front_stand.png') no-repeat center/cover;`)
+        $userCharacter.classList.add('zelda-link-init')
     }
 )
 
 // 3. 캐릭터 이동 관련 변수 및 메서드 선언
-const characterLocation = {
+// const characterLocation = {
+//     x: 0, y: 0
+// }
+// 3-1. 백그라운드 이동으로 로직 변경
+const $townMap = document.querySelector('.town-map');
+const backgroundLocation = {
     x: 0, y: 0
+    // TODO : 백그라운드의 기본위치 및 특별한 위치를 Map 좌표테이터로 관리
+    //        특정 위치에 따라서 백그라운드 이미지를 변경 및 해당 이미지의 좌표계로 초기화
 }
 const step = 20;
 const animationPostfix = {
@@ -37,8 +44,11 @@ const animationPostfix = {
     ArrowLeft: 'left',
     ArrowRight: 'right'
 }
-const characterMove = function() {
-    $userCharacter.setAttribute('style', `transform: translate(${characterLocation.x}px, ${characterLocation.y}px)`)
+// const characterMove = function() {
+//     $userCharacter.setAttribute('style', `transform: translate(${backgroundLocation.x}px, ${backgroundLocation.y}px)`)
+// }
+const bgMove = function() {
+    $townMap.setAttribute('style', `background-position: ${backgroundLocation.x}px ${backgroundLocation.y}px`)
 }
 
 // 키보드 이벤트 처리할 때, 함수 맵을 사용하는 경우가 많음
@@ -48,13 +58,18 @@ const moveTo = {
         function forward() {
             // 객체를 리턴하는 함수 -> 팩토리 패턴 ==(함수형 프로그래밍에 응용)==> 함수를 리턴하는 함수 -> currying 적용에 포함
             return function () {
-                characterLocation.y += step; characterMove();
+                backgroundLocation.y -= step; bgMove();
             }
         }
     )(),  // 선언과 동시에 실행하는 인라인 함수 정의 : (함수정의)(호출)
-    ArrowUp: (function backward() { return function(){ if (characterLocation.y !== 0) { characterLocation.y -= step; characterMove(); } } })(),
-    ArrowLeft: (function left() { return function(){ if (characterLocation.x !== 0) { characterLocation.x -= step; characterMove(); } } })(),
-    ArrowRight: (function right() { return function(){ characterLocation.x += step; characterMove(); } })(),
+    ArrowUp: (function backward() { return function(){
+        // if (backgroundLocation.y !== 0)
+        // {
+            backgroundLocation.y += step; bgMove();
+        // }
+    } })(),
+    ArrowLeft: (function left() { return function(){ if (backgroundLocation.x !== 0) { backgroundLocation.x += step; bgMove(); } } })(),
+    ArrowRight: (function right() { return function(){ backgroundLocation.x -= step; bgMove(); } })(),
 }
 
 // 키맵을 사용해서 사용자의 동작을 해석 (키맵을 데이터로만 사용)
@@ -64,9 +79,12 @@ const pausedActions = Object.values(animationPostfix).map(direction => `pause-${
 // 동작 여러 개가 동시에 적용되는 로직을 구현하기 위해서
 // 멀티 토글링 (상충되는 요소 일괄 Off 후, 특정 필요 요소만 적용하기!)
 function playAnimation(key) {
+    if ($userCharacter.classList.contains('zelda-link-init')) {
+        $userCharacter.classList.remove('zelda-link-init')
+    }
     // 위치이동을 동작 적용과 같은 곳에서 호출해도 무방함
     // (제어 및 코드 관리에 용이한 방식으로 수행)
-    moveTo[key]();
+    // moveTo[key]();
     // 애니메이션 적용
     $userCharacter.classList.remove(...pausedActions);  // 기존 정지모션 모두 삭제
     $userCharacter.classList.add(`running-${animationPostfix[key]}`);  // 특정 움직임 적용
@@ -112,7 +130,7 @@ document.addEventListener('keydown', (event) => {
     // switch-case 문을 함수형 키맵으로 바꿈!
 
     // 4-3. 함수형 프로그래밍 : 함수객체 적용 버전으로 개선
-    // moveTo[event.key]();  // 프로그램의 모듈화 -> 유지보수성 향상
+    moveTo[event.key]();  // 프로그램의 모듈화 -> 유지보수성 향상
     // 처음부터 이렇게 설계해야 하는가? -> 코드가 길어지기 시작하면 적용!
 
     // 4-4. 키 입력에 따른 캐릭터 애니메이션 재생시작

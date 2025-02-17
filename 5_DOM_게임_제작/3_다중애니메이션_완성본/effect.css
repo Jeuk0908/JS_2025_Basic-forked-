@@ -6,6 +6,10 @@
     animation-fill-mode: forwards;
 }
 
+.zelda-link-init {
+    background: url('../img/zelda-link/front_stand.png') no-repeat center/cover;
+}
+
 @keyframes forward-step {
     0% {
         background: url('../img/zelda-link/front_stand.png') no-repeat center/cover;

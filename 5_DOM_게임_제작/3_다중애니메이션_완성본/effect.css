@@ -1,0 +1,187 @@
+/*  캐릭터 애니메이팅  */
+#zelda-link {
+    width: 120px;
+    height: 130px;
+    overflow: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes forward-step {
+    0% {
+        background: url('../img/zelda-link/front_stand.png') no-repeat center/cover;
+    }
+    10% {
+        background: url('../img/zelda-link/front_walk0.png') no-repeat center/cover;
+    }
+    20% {
+        background: url('../img/zelda-link/front_walk1.png') no-repeat center/cover;
+    }
+    30% {
+        background: url('../img/zelda-link/front_walk2.png') no-repeat center/cover;
+    }
+    40% {
+        background: url('../img/zelda-link/front_walk3.png') no-repeat center/cover;
+    }
+    50% {
+        background: url('../img/zelda-link/front_walk4.png') no-repeat center/cover;
+    }
+    60% {
+        background: url('../img/zelda-link/front_walk5.png') no-repeat center/cover;
+    }
+    70% {
+        background: url('../img/zelda-link/front_walk6.png') no-repeat center/cover;
+    }
+    80% {
+        background: url('../img/zelda-link/front_walk7.png') no-repeat center/cover;
+    }
+    90% {
+        background: url('../img/zelda-link/front_walk8.png') no-repeat center/cover;
+    }
+    100% {
+        background: url('../img/zelda-link/front_walk9.png') no-repeat center/cover;
+    }
+}
+
+.pause-forward {
+    animation-play-state: paused;
+    background: url('../img/zelda-link/front_stand.png') no-repeat center/cover;
+}
+.running-forward {
+    animation: forward-step 500ms infinite;
+    animation-play-state: running;
+}
+
+@keyframes backward-step {
+    0% {
+        background: url('../img/zelda-link/back_stand.png') no-repeat center/cover;
+    }
+    10% {
+        background: url('../img/zelda-link/back_walk0.png') no-repeat center/cover;
+    }
+    20% {
+        background: url('../img/zelda-link/back_walk1.png') no-repeat center/cover;
+    }
+    30% {
+        background: url('../img/zelda-link/back_walk2.png') no-repeat center/cover;
+    }
+    40% {
+        background: url('../img/zelda-link/back_walk3.png') no-repeat center/cover;
+    }
+    50% {
+        background: url('../img/zelda-link/back_walk4.png') no-repeat center/cover;
+    }
+    60% {
+        background: url('../img/zelda-link/back_walk5.png') no-repeat center/cover;
+    }
+    70% {
+        background: url('../img/zelda-link/back_walk6.png') no-repeat center/cover;
+    }
+    80% {
+        background: url('../img/zelda-link/back_walk7.png') no-repeat center/cover;
+    }
+    90% {
+        background: url('../img/zelda-link/back_walk8.png') no-repeat center/cover;
+    }
+    100% {
+        background: url('../img/zelda-link/back_walk9.png') no-repeat center/cover;
+    }
+}
+
+.pause-backward {
+    animation-play-state: paused;
+    background: url('../img/zelda-link/back_stand.png') no-repeat center/cover;
+}
+.running-backward {
+    animation: backward-step 500ms infinite;
+    animation-play-state: running;
+}
+
+@keyframes left-step {
+    0% {
+        background: url('../img/zelda-link/left_stand.png') no-repeat center/cover;
+    }
+    10% {
+        background: url('../img/zelda-link/left_walk0.png') no-repeat center/cover;
+    }
+    20% {
+        background: url('../img/zelda-link/left_walk1.png') no-repeat center/cover;
+    }
+    30% {
+        background: url('../img/zelda-link/left_walk2.png') no-repeat center/cover;
+    }
+    40% {
+        background: url('../img/zelda-link/left_walk3.png') no-repeat center/cover;
+    }
+    50% {
+        background: url('../img/zelda-link/left_walk4.png') no-repeat center/cover;
+    }
+    60% {
+        background: url('../img/zelda-link/left_walk5.png') no-repeat center/cover;
+    }
+    70% {
+        background: url('../img/zelda-link/left_walk6.png') no-repeat center/cover;
+    }
+    80% {
+        background: url('../img/zelda-link/left_walk7.png') no-repeat center/cover;
+    }
+    90% {
+        background: url('../img/zelda-link/left_walk8.png') no-repeat center/cover;
+    }
+    100% {
+        background: url('../img/zelda-link/left_walk9.png') no-repeat center/cover;
+    }
+}
+
+.pause-left {
+    animation-play-state: paused;
+    background: url('../img/zelda-link/left_stand.png') no-repeat center/cover;
+}
+.running-left {
+    animation: left-step 500ms infinite;
+    animation-play-state: running;
+}
+
+@keyframes right-step {
+    0% {
+        background: url('../img/zelda-link/right_stand.png') no-repeat center/cover;
+    }
+    10% {
+        background: url('../img/zelda-link/right_walk0.png') no-repeat center/cover;
+    }
+    20% {
+        background: url('../img/zelda-link/right_walk1.png') no-repeat center/cover;
+    }
+    30% {
+        background: url('../img/zelda-link/right_walk2.png') no-repeat center/cover;
+    }
+    40% {
+        background: url('../img/zelda-link/right_walk3.png') no-repeat center/cover;
+    }
+    50% {
+        background: url('../img/zelda-link/right_walk4.png') no-repeat center/cover;
+    }
+    60% {
+        background: url('../img/zelda-link/right_walk5.png') no-repeat center/cover;
+    }
+    70% {
+        background: url('../img/zelda-link/right_walk6.png') no-repeat center/cover;
+    }
+    80% {
+        background: url('../img/zelda-link/right_walk7.png') no-repeat center/cover;
+    }
+    90% {
+        background: url('../img/zelda-link/right_walk8.png') no-repeat center/cover;
+    }
+    100% {
+        background: url('../img/zelda-link/right_walk9.png') no-repeat center/cover;
+    }
+}
+
+.pause-right {
+    animation-play-state: paused;
+    background: url('../img/zelda-link/right_stand.png') no-repeat center/cover;
+}
+.running-right {
+    animation: right-step 500ms infinite;
+    animation-play-state: running;
+}

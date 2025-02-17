@@ -1,51 +1,51 @@
 #zelda-link {
     width: 60px;
     height: 65px;
-    background: url('img/zelda-link/front_stand.png') no-repeat center/cover;
+    background: url('../img/zelda-link/front_stand.png') no-repeat center/cover;
     /*animation-fill-mode: forwards;  !* 마지막 상태에서 멈춤 *!*/
 }
 
 .zelda-link {
     width: 60px;
     height: 65px;
-    background: url('img/zelda-link/front_stand.png') no-repeat center/cover;
+    background: url('../img/zelda-link/front_stand.png') no-repeat center/cover;
     /*animation-fill-mode: forwards;  !* 마지막 상태에서 멈춤 *!*/
 }
 
 /* =============== 정면 움직임 시작 =============== */
 @keyframes forward-step {
     0% {
-        background: url('img/zelda-link/front_stand.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_stand.png') no-repeat center/cover;
     }
     10% {
-        background: url('img/zelda-link/front_walk0.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_walk0.png') no-repeat center/cover;
     }
     20% {
-        background: url('img/zelda-link/front_walk1.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_walk1.png') no-repeat center/cover;
     }
     30% {
-        background: url('img/zelda-link/front_walk2.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_walk2.png') no-repeat center/cover;
     }
     40% {
-        background: url('img/zelda-link/front_walk3.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_walk3.png') no-repeat center/cover;
     }
     50% {
-        background: url('img/zelda-link/front_walk4.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_walk4.png') no-repeat center/cover;
     }
     60% {
-        background: url('img/zelda-link/front_walk5.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_walk5.png') no-repeat center/cover;
     }
     70% {
-        background: url('img/zelda-link/front_walk6.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_walk6.png') no-repeat center/cover;
     }
     80% {
-        background: url('img/zelda-link/front_walk7.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_walk7.png') no-repeat center/cover;
     }
     90% {
-        background: url('img/zelda-link/front_walk8.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_walk8.png') no-repeat center/cover;
     }
     100% {
-        background: url('img/zelda-link/front_walk9.png') no-repeat center/cover;
+        background: url('../img/zelda-link/front_walk9.png') no-repeat center/cover;
     }
 }
 
@@ -64,37 +64,37 @@
 /* =============== 후면 움직임 시작 =============== */
 @keyframes backward-step {
     0% {
-        background: url('img/zelda-link/back_stand.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_stand.png') no-repeat center/cover;
     }
     10% {
-        background: url('img/zelda-link/back_walk0.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_walk0.png') no-repeat center/cover;
     }
     20% {
-        background: url('img/zelda-link/back_walk1.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_walk1.png') no-repeat center/cover;
     }
     30% {
-        background: url('img/zelda-link/back_walk2.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_walk2.png') no-repeat center/cover;
     }
     40% {
-        background: url('img/zelda-link/back_walk3.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_walk3.png') no-repeat center/cover;
     }
     50% {
-        background: url('img/zelda-link/back_walk4.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_walk4.png') no-repeat center/cover;
     }
     60% {
-        background: url('img/zelda-link/back_walk5.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_walk5.png') no-repeat center/cover;
     }
     70% {
-        background: url('img/zelda-link/back_walk6.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_walk6.png') no-repeat center/cover;
     }
     80% {
-        background: url('img/zelda-link/back_walk7.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_walk7.png') no-repeat center/cover;
     }
     90% {
-        background: url('img/zelda-link/back_walk8.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_walk8.png') no-repeat center/cover;
     }
     100% {
-        background: url('img/zelda-link/back_walk9.png') no-repeat center/cover;
+        background: url('../img/zelda-link/back_walk9.png') no-repeat center/cover;
     }
 }
 
@@ -113,37 +113,37 @@
 /* =============== 좌측 움직임 시작 =============== */
 @keyframes left-step {
     0% {
-        background: url('img/zelda-link/left_stand.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_stand.png') no-repeat center/cover;
     }
     10% {
-        background: url('img/zelda-link/left_walk0.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_walk0.png') no-repeat center/cover;
     }
     20% {
-        background: url('img/zelda-link/left_walk1.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_walk1.png') no-repeat center/cover;
     }
     30% {
-        background: url('img/zelda-link/left_walk2.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_walk2.png') no-repeat center/cover;
     }
     40% {
-        background: url('img/zelda-link/left_walk3.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_walk3.png') no-repeat center/cover;
     }
     50% {
-        background: url('img/zelda-link/left_walk4.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_walk4.png') no-repeat center/cover;
     }
     60% {
-        background: url('img/zelda-link/left_walk5.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_walk5.png') no-repeat center/cover;
     }
     70% {
-        background: url('img/zelda-link/left_walk6.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_walk6.png') no-repeat center/cover;
     }
     80% {
-        background: url('img/zelda-link/left_walk7.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_walk7.png') no-repeat center/cover;
     }
     90% {
-        background: url('img/zelda-link/left_walk8.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_walk8.png') no-repeat center/cover;
     }
     100% {
-        background: url('img/zelda-link/left_walk9.png') no-repeat center/cover;
+        background: url('../img/zelda-link/left_walk9.png') no-repeat center/cover;
     }
 }
 
@@ -153,7 +153,7 @@
     animation-play-state: running;
 }
 .pause-left {
-    background: url('img/zelda-link/left_stand.png') no-repeat center/cover !important;
+    background: url('../img/zelda-link/left_stand.png') no-repeat center/cover !important;
     /*animation: left-step 500ms linear infinite 0s;*/
     /*animation-fill-mode: backwards;  !* 첫 상태로 되돌림 *!*/
     /*animation-play-state: paused;*/
@@ -163,37 +163,37 @@
 /* =============== 우측 움직임 시작 =============== */
 @keyframes right-step {
     0% {
-        background: url('img/zelda-link/right_stand.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_stand.png') no-repeat center/cover;
     }
     10% {
-        background: url('img/zelda-link/right_walk0.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_walk0.png') no-repeat center/cover;
     }
     20% {
-        background: url('img/zelda-link/right_walk1.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_walk1.png') no-repeat center/cover;
     }
     30% {
-        background: url('img/zelda-link/right_walk2.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_walk2.png') no-repeat center/cover;
     }
     40% {
-        background: url('img/zelda-link/right_walk3.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_walk3.png') no-repeat center/cover;
     }
     50% {
-        background: url('img/zelda-link/right_walk4.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_walk4.png') no-repeat center/cover;
     }
     60% {
-        background: url('img/zelda-link/right_walk5.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_walk5.png') no-repeat center/cover;
     }
     70% {
-        background: url('img/zelda-link/right_walk6.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_walk6.png') no-repeat center/cover;
     }
     80% {
-        background: url('img/zelda-link/right_walk7.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_walk7.png') no-repeat center/cover;
     }
     90% {
-        background: url('img/zelda-link/right_walk8.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_walk8.png') no-repeat center/cover;
     }
     100% {
-        background: url('img/zelda-link/right_walk9.png') no-repeat center/cover;
+        background: url('../img/zelda-link/right_walk9.png') no-repeat center/cover;
     }
 }
 
@@ -211,50 +211,50 @@
 
 /* =============== 모든 움직임 로드 시작 =============== */
 @keyframes all-step {
-    0% {background: url('img/zelda-link/front_stand.png') no-repeat center/cover;}
-    1% {background: url('img/zelda-link/front_walk0.png') no-repeat center/cover;}
-    2% {background: url('img/zelda-link/front_walk1.png') no-repeat center/cover;}
-    3% {background: url('img/zelda-link/front_walk2.png') no-repeat center/cover;}
-    4% {background: url('img/zelda-link/front_walk3.png') no-repeat center/cover;}
-    5% {background: url('img/zelda-link/front_walk4.png') no-repeat center/cover;}
-    6% {background: url('img/zelda-link/front_walk5.png') no-repeat center/cover;}
-    7% {background: url('img/zelda-link/front_walk6.png') no-repeat center/cover;}
-    8% {background: url('img/zelda-link/front_walk7.png') no-repeat center/cover;}
-    9% {background: url('img/zelda-link/front_walk8.png') no-repeat center/cover;}
-    10% {background: url('img/zelda-link/front_walk9.png') no-repeat center/cover;}
-    10.1% {background: url('img/zelda-link/back_stand.png') no-repeat center/cover;}
-    11% {background: url('img/zelda-link/back_walk0.png') no-repeat center/cover;}
-    12% {background: url('img/zelda-link/back_walk1.png') no-repeat center/cover;}
-    13% {background: url('img/zelda-link/back_walk2.png') no-repeat center/cover;}
-    14% {background: url('img/zelda-link/back_walk3.png') no-repeat center/cover;}
-    15% {background: url('img/zelda-link/back_walk4.png') no-repeat center/cover;}
-    16% {background: url('img/zelda-link/back_walk5.png') no-repeat center/cover;}
-    17% {background: url('img/zelda-link/back_walk6.png') no-repeat center/cover;}
-    18% {background: url('img/zelda-link/back_walk7.png') no-repeat center/cover;}
-    19% {background: url('img/zelda-link/back_walk8.png') no-repeat center/cover;}
-    20% {background: url('img/zelda-link/back_walk9.png') no-repeat center/cover;}
-    20.1% {background: url('img/zelda-link/left_stand.png') no-repeat center/cover;}
-    21% {background: url('img/zelda-link/left_walk0.png') no-repeat center/cover;}
-    22% {background: url('img/zelda-link/left_walk1.png') no-repeat center/cover;}
-    23% {background: url('img/zelda-link/left_walk2.png') no-repeat center/cover;}
-    24% {background: url('img/zelda-link/left_walk3.png') no-repeat center/cover;}
-    25% {background: url('img/zelda-link/left_walk4.png') no-repeat center/cover;}
-    26% {background: url('img/zelda-link/left_walk5.png') no-repeat center/cover;}
-    27% {background: url('img/zelda-link/left_walk6.png') no-repeat center/cover;}
-    28% {background: url('img/zelda-link/left_walk7.png') no-repeat center/cover;}
-    29% {background: url('img/zelda-link/left_walk8.png') no-repeat center/cover;}
-    30% {background: url('img/zelda-link/left_walk9.png') no-repeat center/cover;}
-    40% {background: url('img/zelda-link/right_stand.png') no-repeat center/cover;}
-    41% {background: url('img/zelda-link/right_walk0.png') no-repeat center/cover;}
-    42% {background: url('img/zelda-link/right_walk1.png') no-repeat center/cover;}
-    43% {background: url('img/zelda-link/right_walk2.png') no-repeat center/cover;}
-    44% {background: url('img/zelda-link/right_walk3.png') no-repeat center/cover;}
-    45% {background: url('img/zelda-link/right_walk4.png') no-repeat center/cover;}
-    46% {background: url('img/zelda-link/right_walk5.png') no-repeat center/cover;}
-    47% {background: url('img/zelda-link/right_walk6.png') no-repeat center/cover;}
-    48% {background: url('img/zelda-link/right_walk7.png') no-repeat center/cover;}
-    49% {background: url('img/zelda-link/right_walk8.png') no-repeat center/cover;}
-    50% {background: url('img/zelda-link/right_walk9.png') no-repeat center/cover;}
+    0% {background: url('../img/zelda-link/front_stand.png') no-repeat center/cover;}
+    1% {background: url('../img/zelda-link/front_walk0.png') no-repeat center/cover;}
+    2% {background: url('../img/zelda-link/front_walk1.png') no-repeat center/cover;}
+    3% {background: url('../img/zelda-link/front_walk2.png') no-repeat center/cover;}
+    4% {background: url('../img/zelda-link/front_walk3.png') no-repeat center/cover;}
+    5% {background: url('../img/zelda-link/front_walk4.png') no-repeat center/cover;}
+    6% {background: url('../img/zelda-link/front_walk5.png') no-repeat center/cover;}
+    7% {background: url('../img/zelda-link/front_walk6.png') no-repeat center/cover;}
+    8% {background: url('../img/zelda-link/front_walk7.png') no-repeat center/cover;}
+    9% {background: url('../img/zelda-link/front_walk8.png') no-repeat center/cover;}
+    10% {background: url('../img/zelda-link/front_walk9.png') no-repeat center/cover;}
+    10.1% {background: url('../img/zelda-link/back_stand.png') no-repeat center/cover;}
+    11% {background: url('../img/zelda-link/back_walk0.png') no-repeat center/cover;}
+    12% {background: url('../img/zelda-link/back_walk1.png') no-repeat center/cover;}
+    13% {background: url('../img/zelda-link/back_walk2.png') no-repeat center/cover;}
+    14% {background: url('../img/zelda-link/back_walk3.png') no-repeat center/cover;}
+    15% {background: url('../img/zelda-link/back_walk4.png') no-repeat center/cover;}
+    16% {background: url('../img/zelda-link/back_walk5.png') no-repeat center/cover;}
+    17% {background: url('../img/zelda-link/back_walk6.png') no-repeat center/cover;}
+    18% {background: url('../img/zelda-link/back_walk7.png') no-repeat center/cover;}
+    19% {background: url('../img/zelda-link/back_walk8.png') no-repeat center/cover;}
+    20% {background: url('../img/zelda-link/back_walk9.png') no-repeat center/cover;}
+    20.1% {background: url('../img/zelda-link/left_stand.png') no-repeat center/cover;}
+    21% {background: url('../img/zelda-link/left_walk0.png') no-repeat center/cover;}
+    22% {background: url('../img/zelda-link/left_walk1.png') no-repeat center/cover;}
+    23% {background: url('../img/zelda-link/left_walk2.png') no-repeat center/cover;}
+    24% {background: url('../img/zelda-link/left_walk3.png') no-repeat center/cover;}
+    25% {background: url('../img/zelda-link/left_walk4.png') no-repeat center/cover;}
+    26% {background: url('../img/zelda-link/left_walk5.png') no-repeat center/cover;}
+    27% {background: url('../img/zelda-link/left_walk6.png') no-repeat center/cover;}
+    28% {background: url('../img/zelda-link/left_walk7.png') no-repeat center/cover;}
+    29% {background: url('../img/zelda-link/left_walk8.png') no-repeat center/cover;}
+    30% {background: url('../img/zelda-link/left_walk9.png') no-repeat center/cover;}
+    40% {background: url('../img/zelda-link/right_stand.png') no-repeat center/cover;}
+    41% {background: url('../img/zelda-link/right_walk0.png') no-repeat center/cover;}
+    42% {background: url('../img/zelda-link/right_walk1.png') no-repeat center/cover;}
+    43% {background: url('../img/zelda-link/right_walk2.png') no-repeat center/cover;}
+    44% {background: url('../img/zelda-link/right_walk3.png') no-repeat center/cover;}
+    45% {background: url('../img/zelda-link/right_walk4.png') no-repeat center/cover;}
+    46% {background: url('../img/zelda-link/right_walk5.png') no-repeat center/cover;}
+    47% {background: url('../img/zelda-link/right_walk6.png') no-repeat center/cover;}
+    48% {background: url('../img/zelda-link/right_walk7.png') no-repeat center/cover;}
+    49% {background: url('../img/zelda-link/right_walk8.png') no-repeat center/cover;}
+    50% {background: url('../img/zelda-link/right_walk9.png') no-repeat center/cover;}
 }
 
 .load-all {

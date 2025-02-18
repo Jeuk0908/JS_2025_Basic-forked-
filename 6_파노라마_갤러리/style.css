@@ -46,9 +46,9 @@ body {
     /*  3D 변형을 위한 기본 속성  */
     transform-style: preserve-3d;
     /*  파노라마 애니메이션 8개 face 에 대해 일괄적용  */
-    /*animation: panorama-spin linear 10s infinite;*/
+    animation: panorama-spin linear 10s infinite;
     /*  애니메이션 스핀각도 작업용 제어  */
-    transform: rotateY(315deg)
+    /*transform: rotateY(270deg)*/
 }
 .wrap .circle:hover {
     animation-play-state: paused;
@@ -178,7 +178,50 @@ body {
     letter-spacing: 2px;
 }
 /* -------- [.face3] -------- */
-
+.face3 .inner>div {
+    height: 253px;
+    margin-bottom: 20px;
+}
+.face3 .inner>div .mem-pic {
+    /* 공간 점유 */
+    width: 181px;
+    height: 181px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    /* 공간 채우기 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    /*  콘텐츠 흐름  */
+    position: relative;
+    float: left;
+}
+.face3 .inner>div:nth-child(1) .mem-pic {
+    background-image: url("img/member1.png");
+}
+.face3 .inner>div:nth-child(2) .mem-pic {
+    background-image: url("img/member2.png");
+}
+.face3 .inner>div:nth-child(3) .mem-pic {
+    background-image: url("img/member3.png");
+}
+.face3 .inner>div .mem-intro {
+    width: 322px;
+    height: 179px;
+    float: right;
+    position: relative;
+}
+.face3 .inner>div .mem-intro p {
+    font: 21px/1.4 "Times Roman";
+}
+.face3 .inner>div .mem-intro .join-date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: aquamarine;
+}
 /* -------- [.face4] -------- */
 
 /* -------- [.face5] -------- */

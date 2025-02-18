@@ -46,9 +46,9 @@ body {
     /*  3D 변형을 위한 기본 속성  */
     transform-style: preserve-3d;
     /*  파노라마 애니메이션 8개 face 에 대해 일괄적용  */
-    /*animation: panorama-spin linear 10s infinite;*/
+    animation: panorama-spin linear 10s infinite;
     /*  애니메이션 스핀각도 작업용 제어  */
-    transform: rotateY(45deg)
+    /*transform: rotateY(45deg)*/
 }
 .wrap .circle:hover {
     animation-play-state: paused;

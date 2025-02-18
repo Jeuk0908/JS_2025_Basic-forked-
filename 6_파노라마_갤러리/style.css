@@ -46,9 +46,9 @@ body {
     /*  3D 변형을 위한 기본 속성  */
     transform-style: preserve-3d;
     /*  파노라마 애니메이션 8개 face 에 대해 일괄적용  */
-    animation: panorama-spin linear 10s infinite;
+    /*animation: panorama-spin linear 10s infinite;*/
     /*  애니메이션 스핀각도 작업용 제어  */
-    /*transform: rotateY(180deg)*/
+    transform: rotateY(45deg)
 }
 .wrap .circle:hover {
     animation-play-state: paused;
@@ -136,6 +136,10 @@ body {
 .wrap .inner>div:hover, .inner>nav>div:hover {
     opacity: 1;
     transform: scale(1.05);
+    box-shadow: 0 0 10px aquamarine;
+}
+.wrap .inner>div:hover i, .inner>nav>div:hover i {
+    text-shadow: 0 0 10px aqua;
 }
 /* ---------- 4) 내부 콘텐츠 공통 레이아웃 및 동작 지정 끝 ---------- */
 /* ---------- 5) 내부 콘텐츠 Face 별 개별 동작 지정 시작 ---------- */
@@ -275,11 +279,118 @@ body {
     top: -50%;
 }
 /* -------- [.face6] -------- */
-
+.face6>.inner>div {
+    height: 185px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.face6>.inner>div i {
+    width: 150px;
+    font-size: 113px;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #dddddd;
+    box-sizing: border-box;
+}
+.face6>.inner>div:first-child i {
+    margin-top: 10px;
+    font-size: 95px;
+}
+.face6>.inner>div .content {
+    float: right;
+    width: 60%;
+}
+.face6>.inner>div .content h2 {}
+.face6>.inner>div .content p {}
+.face6>.inner>div .content a {
+    color: aqua;
+}
 /* -------- [.face7] -------- */
-
+/* opacity 개별 컨트롤 */
+.face7 .inner>div {
+    opacity: 1;
+}
+.face7 .inner>div>h2,
+.face7 .inner>div img {
+    opacity: 0.7;
+}
+.face7:hover .inner>div>h2,
+.face7:hover .inner>div img {
+    opacity: 1;
+}
+.face7 .inner h2 {
+    /* 위치 설정 */
+    z-index: 10;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    /*  콘텐츠 설정  */
+    font-size: 60px;
+    text-shadow: 2px 2px 5px aqua;
+}
+.face7 .inner .video-frame {
+    position: absolute;
+    overflow: hidden;
+    /* 상위 요소 가로 치수 */
+    width: 528px;
+    height: 728px;
+}
+.face7 .inner video {
+    width: auto;
+    /* 콘텐츠 크기 */
+    height: 728px;
+    position: absolute;
+    left: -53%;
+}
+.face7 .inner .deco-text {
+    width: 80%;
+    position: absolute;
+    top: 35%;
+}
+.face7 .inner .deco-line {
+    width: 110%;
+    position: absolute;
+    top: -20%;
+}
 /* -------- [.face8] -------- */
-
-
+.face8 .inner>div {
+    height: 390px;
+    margin-bottom: 20px;
+}
+.face8 .inner>div:nth-child(2),
+.face8 .inner>div:nth-child(3)
+{
+    position: absolute;
+    width: 290px;
+    bottom: -20px;
+    margin-right: 20px;
+}
+.face8 .inner>div:nth-child(3)
+{
+    right: -20px;
+}
+.face8 .inner>div h2 {
+    font-size: 35px;
+}
+.face8 .inner>div:first-child i {
+    position: absolute;
+    top: 100px;
+    right: 35px;
+    font-size: 200px;
+}
+.face8 .inner>div span {
+    position: absolute;
+    top: 150px;
+    left: 80px;
+    font-size: 70px;
+    transition: all 300ms;
+    font-weight: bolder;
+}
+.face8 .inner>div:hover span {
+    text-shadow: 0 0 10px aqua;
+}
+.face8 .inner>div i {}
+.face8 .inner>div h3 {}
+.face8 .inner>div p {}
 /* ---------- 5) 내부 콘텐츠 Face 별 개별 동작 지정 끝 ---------- */
 /* ========== 갤러리 화면 요소 제어 끝 ========== */

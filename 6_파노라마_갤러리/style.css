@@ -48,7 +48,7 @@ body {
     /*  파노라마 애니메이션 8개 face 에 대해 일괄적용  */
     animation: panorama-spin linear 10s infinite;
     /*  애니메이션 스핀각도 작업용 제어  */
-    /*transform: rotateY(270deg)*/
+    /*transform: rotateY(180deg)*/
 }
 .wrap .circle:hover {
     animation-play-state: paused;
@@ -111,7 +111,7 @@ body {
 }
 .wrap .circle article:hover h1 {
     opacity: 1;
-    top: -50px;
+    top: -70px;
 }
 /* ---------- 3) Face 별 타이틀 제어 끝 ---------- */
 /* ---------- 4) 내부 콘텐츠 공통 레이아웃 및 동작 지정 시작 ---------- */
@@ -135,6 +135,7 @@ body {
 }
 .wrap .inner>div:hover, .inner>nav>div:hover {
     opacity: 1;
+    transform: scale(1.05);
 }
 /* ---------- 4) 내부 콘텐츠 공통 레이아웃 및 동작 지정 끝 ---------- */
 /* ---------- 5) 내부 콘텐츠 Face 별 개별 동작 지정 시작 ---------- */
@@ -223,9 +224,56 @@ body {
     color: aquamarine;
 }
 /* -------- [.face4] -------- */
-
+.face4 .inner>div:first-child {
+    height: 515px;
+}
+.face4 .inner>div:last-child {
+    margin-top: 20px;
+    height: 265px;
+    position: relative;
+}
+.face4 .inner>div video {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.face4 .inner>div h2 {
+    color: #fff;
+}
+.face4 .inner>div p {
+    margin-top: 20px;
+    font: 21px/1.4 "Times Roman";
+}
+.face4 .inner>div .topic-date {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+}
 /* -------- [.face5] -------- */
-
+.face5 h2 {
+    font: 40px/1.2 "orbitron";
+    font-weight: bolder;
+}
+.face5 .pic {
+    width: 100%;
+    height: 440px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background: url("img/teslaoptimus.jpg") center/cover;
+}
+.face5 img {
+    margin-top: 10px;
+}
+.face5 .reflect {
+    width: 100%;
+    position: absolute;
+    transition: all 500ms;
+    left: 0;
+    top: 100%;
+}
+.face5:hover .reflect {
+    position: absolute;
+    top: -50%;
+}
 /* -------- [.face6] -------- */
 
 /* -------- [.face7] -------- */

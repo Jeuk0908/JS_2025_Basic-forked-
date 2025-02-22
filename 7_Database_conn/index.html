@@ -16,37 +16,51 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-<h1>SQLite CRUD Web App (HTML/CSS/JS)</h1>
-
-<!-- 데이터베이스 파일 관리 -->
-<h2>📂 데이터베이스 관리</h2>
-<button onclick="saveDatabase()">💾 DB 저장</button>
-<input type="file" id="dbFileInput" accept=".sqlite" onchange="loadDatabase(event)">
-<br><br>
-
-<!-- 사용자 입력 폼 -->
-<h2>📋 회원 등록</h2>
-<form id="userForm">
-  <label for="name">이름:</label>
-  <input type="text" id="name" required>
-  <label for="email">이메일:</label>
-  <input type="email" id="email" required>
-  <button type="submit">회원 추가</button>
-</form>
-
-<!-- 회원 목록 -->
-<h2>👥 회원 목록</h2>
-<table border="1" id="userTable">
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>이름</th>
-    <th>이메일</th>
-    <th>수정</th>
-    <th>삭제</th>
-  </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+<div class="container">
+  <h1>SQLite CRUD Web App (HTML/CSS/JS)</h1>
+  <hr>
+  <section class="db-mgmt">
+    <!-- 데이터베이스 파일 관리 -->
+    <h2>📂 DB Export 및 Load</h2>
+    <div class="db_save">
+      <label for="saveDB">데이터베이스 저장 : </label>
+      <button id="saveDB">💾 DB Save</button>
+    </div>
+    <div class="db_load">
+      <label for="loadDB">데이터베이스 로드 : </label>
+      <input type="file" id="loadDB" accept=".sqlite">
+    </div>
+  </section>
+  <hr>
+  <section class="user-add">
+    <!-- 사용자 입력 폼 -->
+    <h2>📋 회원 등록</h2>
+    <form id="userForm">
+      <label for="name">이름:</label>
+      <input type="text" id="name" required>
+      <label for="email">이메일:</label>
+      <input type="email" id="email" required>
+      <button type="submit">회원 추가</button>
+    </form>
+  </section>
+  <hr>
+  <section class="user-list">
+    <!-- 회원 목록 -->
+    <h2>👥 회원 목록</h2>
+    <table border="1" id="userTable">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>이름</th>
+        <th>이메일</th>
+        <th>수정</th>
+        <th>삭제</th>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+  <hr>
+</div>
 </body>
 </html>

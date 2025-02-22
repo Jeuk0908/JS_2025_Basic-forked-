@@ -84,6 +84,8 @@ function saveDatabase() {
     link.click();
     alert("데이터베이스가 저장되었습니다.");
 }
+const dbSaveBtn = document.getElementById('saveDB')
+dbSaveBtn.addEventListener('click', saveDatabase)
 
 // 데이터베이스 파일 불러오기
 async function loadDatabase(event) {
@@ -101,6 +103,8 @@ async function loadDatabase(event) {
     };
     reader.readAsArrayBuffer(file);
 }
+const dbLoadBtn = document.getElementById('loadDB')
+dbLoadBtn.addEventListener('change', loadDatabase)
 
 // 페이지 로딩 시 DB 초기화
 window.onload = initDatabase;

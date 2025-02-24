@@ -1,4 +1,5 @@
 let db;  // 데이터베이스 객체
+const DB_FILE_URL = "sample-db.sqlite";  // 초기화할 DB 파일 경로
 
 // SQLite 환경 초기화
 async function initDatabase() {
@@ -6,17 +7,28 @@ async function initDatabase() {
         locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/${file}`
     });
 
-    // DB 없으면 새로 생성
-    db = new SQL.Database();
+    // 특정 DB 파일이 존재하면 불러오기
+    try {
+        const response = await fetch(DB_FILE_URL);
+        if (!response.ok) throw new Error("DB 파일을 찾을 수 없습니다.");
 
-    // users 테이블 생성
-    db.run(
-        `CREATE TABLE users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name VARCHAR(30) NOT NULL,
-            email VARCHAR(30) NOT NULL
-        );`
-    );
+        const data = await response.arrayBuffer();
+        db = new SQL.Database(new Uint8Array(data));
+        console.log("✅ DB 파일에서 초기화 완료!");
+    } catch (error) {
+        console.warn("⚠️ DB 파일이 없어 새 데이터베이스를 생성합니다.");
+        db = new SQL.Database();
+
+        // 새 테이블 생성
+        db.run(`
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                email TEXT NOT NULL
+            );
+        `);
+    }
+
     displayUsers();
 }
 

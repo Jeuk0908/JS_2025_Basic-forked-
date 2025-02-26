@@ -128,8 +128,8 @@ $dbLoadBtn.addEventListener('change', loadDatabase)
 // 데이터베이스 IndexedDB에 저장
 function saveDBToIndexedDB() {
     const dbData = db.export();
-    const blob = new Blob([dbData], { type: "application/octet-stream" });
-    indexedDB.deleteDatabase(DB_NAME);
+    const buffer = dbData.buffer; // ArrayBuffer 추출
+    // indexedDB.deleteDatabase(DB_NAME);
     const request = indexedDB.open(DB_NAME, 1);
     request.onsuccess = (event) => {
         const db = event.target.result;
@@ -139,7 +139,7 @@ function saveDBToIndexedDB() {
         }
         const transaction = db.transaction("sqliteDB", "readwrite");
         const store = transaction.objectStore("sqliteDB");
-        const putRequest = store.put(blob, "db");
+        const putRequest = store.put(buffer, "db");
         putRequest.onsuccess = () => {
             console.log("💾 데이터베이스가 IndexedDB에 안전하게 저장되었습니다.");
         };
@@ -148,7 +148,7 @@ function saveDBToIndexedDB() {
         };
         // 트랜잭션 완료 시점까지 기다리기
         transaction.oncomplete = () => {
-            console.log("✅ IndexedDB 트랜잭션 완료");
+            console.log("✅ (DB 저장) IndexedDB 트랜잭션 완료");
         }
     };
     request.onerror = (err) => {
@@ -178,12 +178,12 @@ async function loadDatabaseFromIndexedDB() {
             const store = transaction.objectStore("sqliteDB");
             const getRequest = store.get("db");
             getRequest.onsuccess = () => {
-                resolve(getRequest.result ? getRequest.result.arrayBuffer() : null);
+                resolve(getRequest.result || null);
             };
             getRequest.onerror = () => reject("❌ 데이터베이스 로딩 실패");
             // 트랜잭션 완료 시점 명확히 처리
             transaction.oncomplete = () => {
-                console.log("✅ IndexedDB 트랜잭션 완료");
+                console.log("✅ (DB 로드) IndexedDB 트랜잭션 완료");
             };
         };
         request.onerror = () => reject("❌ IndexedDB 열기 실패");

@@ -116,7 +116,7 @@ async function loadDatabase(event) {
         const data = new Uint8Array(e.target.result);
         const SQL = await initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/${file}` });
         db = new SQL.Database(data);
-        console.log("파일로부터 데이터베이스 로드 완료.");
+        console.log("📂 파일로부터 데이터베이스 로드 완료.");
         displayUsers();
     };
     reader.readAsArrayBuffer(file);

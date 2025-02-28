@@ -136,8 +136,3 @@ $dbLoadBtn.addEventListener('change', loadDatabase)
 
 // 페이지 로딩 시 DB 초기화
 window.onload = initDatabase;
-// window.onload = () => {
-//     const CURRENT_HOST = window.location.host;
-//     const DB_NAME = `sqliteDB@${CURRENT_HOST}`;  // IndexedDB에 저장할 데이터베이스 이름
-//     indexedDB.deleteDatabase(DB_NAME);
-// }
